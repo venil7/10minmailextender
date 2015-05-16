@@ -1,0 +1,28 @@
+{
+  "name": "10 Minute Mail Extender",
+  "short_name": "10 minute mail extender",
+  "author": "darkruby",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Extends expiry for 10minutemail.net service",
+  "homepage_url": "http://www.darkruby.co.uk",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "notifications",
+    "http://10minutemail.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://10minutemail.com/*"
+      ],
+      "js": [
+        "/js/jquery/jquery.min.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
